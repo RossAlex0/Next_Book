@@ -3,6 +3,7 @@
   width: 100%;
   display: flex;
   align-items: center;
+  position: relative;
   padding: 0.3rem;
   background-color: #1d1d1d;
   border-radius: 48px;
@@ -18,7 +19,7 @@
       text-overflow: ellipsis;
     }
 
-    & a {
+    & .google_link {
       border: 1px solid rgb(27, 126, 255);
       padding: 0.3rem 0.5rem;
       color: rgb(26, 123, 249);
@@ -38,11 +39,19 @@
     }
   }
 
-  & div:last-child {
+  & .btn_link {
     width: 10%;
     margin-inline: auto;
   }
   & * {
     color: #e6e6e6c7;
   }
+}
+
+.card_link {
+  text-decoration: none;
+  position: absolute;
+  height: 100%;
+  width: 90%;
+  content: "";
 }

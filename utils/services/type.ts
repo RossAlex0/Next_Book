@@ -4,6 +4,11 @@ export type ApiResponse = {
   data: ApiData[];
 };
 
+export type ApiIdResponse = {
+  data: ApiData;
+  statusCode: number;
+};
+
 export type ApiData = {
   id: string;
   volumeInfo: VolumeInfo;
