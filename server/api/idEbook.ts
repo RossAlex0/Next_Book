@@ -1,12 +1,13 @@
 import { getQuery } from "h3";
 import { H3Event } from "h3";
 import { googleApiURL } from "../constant";
+import { ApiData } from "~/utils/services/type";
 
 export default defineEventHandler(async (event: H3Event) => {
   try {
     const { id } = getQuery(event);
-
-    const response: object = await $fetch(`${googleApiURL}/${id}`);
+    console.info(id);
+    const response: ApiData = await $fetch(`${googleApiURL}/${id}`);
 
     if (response) {
       return {

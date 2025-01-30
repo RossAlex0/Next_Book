@@ -1,4 +1,4 @@
-import type { ApiResponse } from "./type";
+import type { ApiData, ApiIdResponse, ApiResponse } from "./type";
 
 export async function getEbooks(
   type?: string,
@@ -17,6 +17,16 @@ export async function getEbooks(
       request += `?limit=${limit}`;
     }
     return await $fetch(request);
+  } catch (error) {
+    console.info(error);
+  }
+}
+
+export async function getBookById(
+  id: string
+): Promise<ApiIdResponse | undefined> {
+  try {
+    return await $fetch(`/api/idEbook?id=${id}`);
   } catch (error) {
     console.info(error);
   }
