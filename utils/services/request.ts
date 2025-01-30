@@ -8,15 +8,14 @@ export async function getEbooks(
   try {
     let request = "/api/ebooks";
     if (query && type) {
-      request += `?q=${type}:${query}`;
+      request += `?type=${type}&query=${query}`;
     }
 
     if (limit && query && type) {
-      request += `&maxResults=${limit}`;
+      request += `&limit=${limit}`;
     } else if (limit) {
-      request += `?maxResults=${limit}`;
+      request += `?limit=${limit}`;
     }
-    console.info(request);
     return await $fetch(request);
   } catch (error) {
     console.info(error);

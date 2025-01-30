@@ -13,9 +13,9 @@ export type ApiData = {
 export type VolumeInfo = {
   title: string;
   authors: string[];
-  imageLinks: {
-    smallThumbnail: string;
-    thumbnail: string;
+  imageLinks?: {
+    smallThumbnail?: string;
+    thumbnail?: string;
   };
   pageCount: number;
   publishedDate: number;
