@@ -1,0 +1,46 @@
+.input_container {
+  height: 1.8rem;
+  width: 100%;
+  margin-top: 0.3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 16px;
+  border: 1px solid #e6e6e6;
+}
+.input_element {
+  height: 100%;
+  width: 82%;
+  padding-left: 1rem;
+  background: none;
+  border: none;
+  outline: none;
+}
+
+.input_button {
+  height: 100%;
+  width: 18%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  border-left: 1px solid #e6e6e6;
+  cursor: pointer;
+
+  &:hover img {
+    transform: scale(0.9);
+  }
+
+  & img {
+    height: 24px;
+    width: 24px;
+    margin-left: -4px;
+    max-width: 60%;
+    max-height: 60%;
+    transition: transform 0.5s;
+  }
+}
+.focuscc {
+  background-color: #fff;
+}
